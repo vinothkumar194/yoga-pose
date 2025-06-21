@@ -1,14 +1,7 @@
-# Core dependencies with compatible versions
-streamlit 
-opencv-python 
-numpy 
-tensorflow 
-ultralytics 
-
-# Additional dependencies that might be needed
-Pillow 
-protobuf 
-typing-extensions 
-
-# For deployment
-python-multipart
+streamlit>=1.28.0
+opencv-python-headless>=4.8.0
+numpy>=1.21.0
+tensorflow>=2.8.0,<2.16.0
+ultralytics>=8.0.0
+pathlib2>=2.3.0
+Pillow>=8.0.0
