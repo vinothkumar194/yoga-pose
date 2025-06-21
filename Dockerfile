@@ -1,4 +1,4 @@
-# Use official Python 3.11 image
+# Use official Python 3.11 slim image
 FROM python:3.11-slim
 
 # Set working directory
@@ -13,13 +13,15 @@ RUN apt-get update && apt-get install -y \
 
 # Copy requirements.txt first to leverage Docker layer caching
 COPY requirements.txt .
+
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code
 COPY . .
 
-# Expose port for the Streamlit app
+# Expose port used by Streamlit
 EXPOSE 8501
 
 # Run the Streamlit app
-CMD ["streamlit", "run", "yogapose.py"]
+CMD ["streamlit", "run", "yogapose.py", "--server.address=0.0.0.0", "--server.port=8501"]
