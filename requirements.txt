@@ -1,6 +1,6 @@
 streamlit
 opencv-python-headless
-tensorflow==2.13.0
+tensorflow 
 ultralytics
 numpy
 
