@@ -1,4 +1,4 @@
-# Use official Python 3.11 slim image
+# Use official Python 3.11 slim image (TensorFlow compatible)
 FROM python:3.11-slim
 
 # Set working directory
